@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { AiFillPhone, AiTwotoneMail } from "react-icons/ai";
+import { BiCurrentLocation } from "react-icons/bi";
 
 const Header = () => {
   const [data, setData] = useState(null);
@@ -28,12 +30,19 @@ const Header = () => {
               src={data.picture.medium}
               alt="data.name.first"
             />
-            <p>
+            <p className="text-3xl">
               {data.name.title}. {data.name.first} {data.name.last}
             </p>
-            <p>{data.email}</p>
-            <p>{data.phone}</p>
-            <p>
+            <p className="flex items-center ">
+              <AiTwotoneMail className="text-2xl mr-3" />
+              {data.email}
+            </p>
+            <p className="flex items-center">
+              <AiFillPhone className="text-2xl mr-3" />
+              {data.phone}
+            </p>
+            <p className="flex items-center">
+              <BiCurrentLocation className="text-2xl mr-3" />
               {data.location.city}-{data.location.country}
             </p>
             <p>Age: {data.dob.age}</p>
