@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <div className="bos">
-        {data && (
+        {data ? (
           <div className="flex flex-col  justify-between items-center w-[30rem] h-[30rem] mx-auto text-center bg-blue-300 p-4">
             <img
               className="rounded-full w-[9rem]"
@@ -39,6 +39,8 @@ const Header = () => {
             <p>Age: {data.dob.age}</p>
             <p>Register Date: {data.registered.date.slice(0, 10)}</p>
           </div>
+        ) : (
+          "404 Not Found - Error"
         )}
       </div>
       <button
