@@ -1,5 +1,20 @@
 # Getting Started with Create React App
 
+
+
+I used;
+
+Components
+useState
+useEffect
+axios
+import/export
+Props
+React Developer Tool
+Destructuring props
+array map method
+array some method
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
