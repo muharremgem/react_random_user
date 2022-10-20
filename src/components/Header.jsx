@@ -25,9 +25,9 @@ const Header = () => {
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <div className="bos">
         {data ? (
-          <div className="flex flex-col  justify-between items-center w-[30rem] h-[30rem] mx-auto text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
+          <div className="flex flex-col rounded-xl justify-between items-center w-[30rem] h-[30rem] mx-auto text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
             <img
-              className="rounded-full w-[9rem]"
+              className="rounded-full w-[9rem]  hover:scale-95 transition-all"
               src={data.picture.medium}
               alt="data.name.first"
             />
@@ -55,7 +55,7 @@ const Header = () => {
         )}
       </div>
       <button
-        className="bg-blue-500 p-1 rounded-lg text-white hover:bg-green-400 hover:text-black mt-5"
+        className=" hover:scale-95 transition-all p-2 rounded-lg text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-7"
         onClick={() => getApi()}
       >
         Random User
