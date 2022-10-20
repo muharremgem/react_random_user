@@ -9,7 +9,6 @@ const Header = () => {
     axios
       .get("https://randomuser.me/api/")
       .then((res) => {
-        console.log(res);
         setData(res.data.results[0]);
       })
       .catch((err) => console.log(err));
@@ -29,9 +28,25 @@ const Header = () => {
               src={data.picture.medium}
               alt="data.name.first"
             />
+            <p>
+              {data.name.title}. {data.name.first} {data.name.last}
+            </p>
+            <p>{data.email}</p>
+            <p>{data.phone}</p>
+            <p>
+              {data.location.city}-{data.location.country}
+            </p>
+            <p>Age: {data.dob.age}</p>
+            <p>Register Date: {data.registered.date.slice(0, 10)}</p>
           </div>
         )}
       </div>
+      <button
+        className="bg-blue-500 p-1 text-white hover:bg-slate-400 hover:text-black mt-5"
+        onClick={() => getApi()}
+      >
+        Random User
+      </button>
     </div>
   );
 };
