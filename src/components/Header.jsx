@@ -27,7 +27,7 @@ const Header = () => {
         {data ? (
           <div className="flex flex-col rounded-xl justify-between items-center w-[30rem] h-[30rem] mx-auto text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
             <img
-              className="rounded-full w-[9rem]  hover:scale-95 transition-all"
+              className="rounded-full w-[10rem]  hover:scale-95 transition-all"
               src={data.picture.medium}
               alt="data.name.first"
             />
