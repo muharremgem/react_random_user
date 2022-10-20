@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { AiFillPhone, AiTwotoneMail } from "react-icons/ai";
 import { BiCurrentLocation } from "react-icons/bi";
+import { MdDriveFileRenameOutline } from "react-icons/md";
 
 const Header = () => {
   const [data, setData] = useState(null);
@@ -30,7 +31,8 @@ const Header = () => {
               src={data.picture.medium}
               alt="data.name.first"
             />
-            <p className="text-3xl">
+            <p className="flex items-center text-3xl">
+              <MdDriveFileRenameOutline className="text-2xl mr-3" />
               {data.name.title}. {data.name.first} {data.name.last}
             </p>
             <p className="flex items-center ">
@@ -53,7 +55,7 @@ const Header = () => {
         )}
       </div>
       <button
-        className="bg-blue-500 p-1 text-white hover:bg-slate-400 hover:text-black mt-5"
+        className="bg-blue-500 p-1 rounded-lg text-white hover:bg-green-400 hover:text-black mt-5"
         onClick={() => getApi()}
       >
         Random User
